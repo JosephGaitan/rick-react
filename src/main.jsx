@@ -8,6 +8,7 @@ import Base from './Base'
 import Charaters from './pages/Charaters'
 //other
 import './index.css'
+import {loader as loaderGetCharacters} from './pages/Charaters'
 
 
 const router = createBrowserRouter([
@@ -17,7 +18,9 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/Characters',
-        element: <Charaters/>
+        element: <Charaters/>,
+        loader: loaderGetCharacters
+
       }
     ]
   },

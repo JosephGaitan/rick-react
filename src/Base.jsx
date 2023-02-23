@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 
+
 const Base = () => {
   return (
     <div>
@@ -17,7 +18,7 @@ const Base = () => {
           <li>Episodes</li>
         </ul>
       </nav>
-        <main className="bg-black h-full max-md:overflow-auto">
+        <main className=" bg-black h-full max-md:overflow-auto">
           <Outlet />
         </main>
     </div>
