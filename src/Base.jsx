@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import { useState } from "react";
+import rickIcon from '../src/assets/rick-1.png'
 
 
 const Base = () => {
@@ -9,14 +10,12 @@ const Base = () => {
   document.body.style.backgroundColor = color;
 
   return (
-    <div className="h-full bg-black w-full ">
-      <header className="md:h-1/5 p-6 bg-lime-700">
-        <h1 className="text-black text-3xl text-center font-bold ">
-          Rick and Morty
-        </h1>
+    <div className="h-full bg-black w-full">
+      <header className="md:h-1/5 p-6 bg-black flex justify-center">
+        <img className="w-auto h-20" src={rickIcon} alt='img'/>
       </header>
-      <nav>
-        <ul className=" font-medium justify-between text-lg flex w-full px-10 bg-lime-600 ">
+      <nav className=" font-lato">
+        <ul className=" font-bold justify-between text-lg flex w-full px-10 bg-lime-600 ">
           <Link to={"/"}>
             <li>Characters</li>
           </Link>

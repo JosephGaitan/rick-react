@@ -1,9 +1,8 @@
 import React from "react";
 
 const CardCharacter = ({ characters, i }) => {
-  console.log(characters);
   return (
-    <div className="w-50  bg-lime-500 overflow-hidden rounded-md block p-2 m-8 ">
+    <div className="w-50  bg-lime-500 overflow-hidden rounded-md block p-2 m-8 font-lato ">
       <img className="w-full mb-5" src={characters[i].image} alt="img" />
       <ul className="text-black text-xl text-left m-3 ">
         <li className="font-bold">Name: </li>
@@ -12,7 +11,7 @@ const CardCharacter = ({ characters, i }) => {
         <span>{characters[i].species} - </span>
         <span
           className={`${
-            characters[i].status === "Alive" ? "text-blue-700" : "text-black" ^ characters[i].status === 'Dead' ? 'text-red-900' : ''
+            characters[i].status === "Alive" ? "text-blue-700 font-bold" : "" ^ characters[i].status === 'Dead' ?  'text-red-900 font-creep' : '' ^ characters[i].status === "unknown" ? " text-black font-bold" : ""
           }`}
         >
           {characters[i].status}
