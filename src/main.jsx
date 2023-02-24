@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom/client'
 import Base from './Base'
 //Pages
 import Charaters from './pages/Charaters'
+import Location from './pages/Location'
 //other
 import './index.css'
 import {loader as loaderGetCharacters} from './pages/Charaters'
@@ -17,10 +18,14 @@ const router = createBrowserRouter([
     element: <Base/>,
     children: [
       {
-        path: '/Characters',
+        path: '/',
         element: <Charaters/>,
         loader: loaderGetCharacters
 
+      },
+      {
+        path : '/location',
+        element: <Location/>
       }
     ]
   },

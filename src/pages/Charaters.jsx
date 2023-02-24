@@ -41,20 +41,20 @@ const Charaters = () => {
         Complete list of caracters from Rick and Morty
       </h3>
       </header>
-      <nav className="font-medium">
+      <nav className=" max-md:justify-center justify-end flex space-x-5 md:mr-10 font-medium">
         <button
         onClick={next} 
-        className="float-right bg-lime-700 py-2 px-2 rounded border-none mr-10">
+        className="  bg-lime-700 py-2 px-2 rounded border-none ">
           Next
         </button>
        <span 
-       className=" cursor-default float-right bg-lime-700 py-2 px-5 rounded border-none mr-2"
+       className=" cursor-default  bg-lime-700 py-2 px-5 rounded border-none "
        >
          Page: {count}
        </span>
        <button
        onClick={back} 
-       className="float-right bg-lime-700 py-2 px-2 rounded border-none mr-2"
+       className=" bg-lime-700 py-2 px-2 rounded border-none "
        >
           Back
         </button>

@@ -17,10 +17,12 @@ const Base = () => {
       </header>
       <nav>
         <ul className=" font-medium justify-between text-lg flex w-full px-10 bg-lime-600 ">
-          <Link to={"/Characters"}>
+          <Link to={"/"}>
             <li>Characters</li>
           </Link>
-          <li>Location</li>
+          <Link to={"/location"}>
+            <li>Location</li>
+          </Link>
           <li>Episodes</li>
         </ul>
       </nav>
