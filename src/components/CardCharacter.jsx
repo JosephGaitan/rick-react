@@ -3,13 +3,13 @@ import React from "react";
 const CardCharacter = ({ characters, i }) => {
   //console.log(characters);
   return (
-    <div className="w-45 bg-lime-500 overflow-hidden rounded-md block p-2 m-5">
+    <div className="w-45  bg-lime-500 overflow-hidden rounded-md block p-2 m-5 ">
       <img
-        className="w-full"
+        className="w-full mb-5"
         src={characters[i].image}
         alt="img"
       />
-      <ul className="text-black  text-center">
+      <ul className="text-black text-2xl text-center">
         <li className="font-bold">Name: </li>
         <span>{characters[i].name}</span>
         <li className="font-bold">Species: </li>

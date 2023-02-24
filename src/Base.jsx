@@ -1,9 +1,15 @@
 import { Outlet, Link } from "react-router-dom";
+import { useState } from "react";
 
 
 const Base = () => {
+
+  const [color, changeColor] = useState("#000000");
+
+  document.body.style.backgroundColor = color;
+
   return (
-    <div>
+    <div className="h-full bg-black w-full ">
       <header className="md:h-1/5 p-6 bg-lime-700">
         <h1 className="text-black text-3xl text-center font-bold ">
           Rick and Morty
