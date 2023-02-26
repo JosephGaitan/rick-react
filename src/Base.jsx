@@ -15,14 +15,13 @@ const Base = () => {
         <img className="w-auto h-20" src={rickIcon} alt='img'/>
       </header>
       <nav className=" font-lato">
-        <ul className=" font-bold justify-between text-lg flex w-full px-10 bg-lime-600 ">
+        <ul className=" font-bold space-x-10  text-lg flex w-full px-10 bg-lime-600 ">
           <Link to={"/"}>
             <li>Characters</li>
           </Link>
           <Link to={"/location"}>
             <li>Location</li>
           </Link>
-          <li>Episodes</li>
         </ul>
       </nav>
         <main className=" bg-black h-full max-md:overflow-auto">
