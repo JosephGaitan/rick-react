@@ -1,37 +1,62 @@
 import React from "react";
 import Spinner from "./Spinner";
+import image from "../assets/rick-and-morty.png";
 
-const CardCharacter = ({ characters, i, cargando, }) => {
-  return (
-    <div className="w-50  bg-lime-500 rounded-xl overflow-hidden block  m-8 font-lato ">
-      {cargando === true ? (
-        <Spinner />
-      ) : (
-        <img className="w-full mb-5" src={characters[i].image} alt="img" />
-      )}
-      <ul className="text-black  text-left m-3 ">
-        <li className="font-bold text-2xl ">{characters[i].name}</li>
-        <li className="font-bold  ">
-          {" "}
-          {characters[i].species} -{" "}
-          <span
-            className={`${
-              characters[i].status === "Alive"
-                ? "text-blue-700 font-bold"
-                : "" ^ (characters[i].status === "Dead")
-                ? "text-red-700 font-creep"
-                : "" ^ (characters[i].status === "unknown")
-                ? " text-black font-bold"
-                : ""
-            }`}
-          >
-            {characters[i].status}
-          </span>
-        </li>
-        <li className="text-gray-900 font-bold text-xl">Origin - {characters[i].origin.name}</li>
-      </ul>
-    </div>
-  );
+const CardCharacter = ({ characters, cargando, pages }) => {
+  let display;
+
+  if (pages > 0) {
+    display = characters.map((x) => {
+      let { id, image, name, status, location, species, origin } = x;
+      return (
+        <div
+          key={id}
+          className=" w-50  bg-lime-500 rounded-xl overflow-hidden block  m-5 font-lato "
+        >
+          {cargando === true ? (
+            <Spinner />
+          ) : (
+            <img className="w-full mb-5" src={image} alt="img" />
+          )}
+          <ul className="text-black  text-left m-3 ">
+            <li className="font-bold text-2xl ">{name}</li>
+            <li className="font-bold  ">
+              {" "}
+              {species} -{" "}
+              <span
+                className={`${
+                  status === "Alive"
+                    ? "text-blue-700 font-bold"
+                    : "" ^ (status === "Dead")
+                    ? "text-red-700 font-creep"
+                    : "" ^ (status === "unknown")
+                    ? " text-black font-bold"
+                    : ""
+                }`}
+              >
+                {status}
+              </span>
+            </li>
+            <li className="text-gray-900 font-bold text-xl">
+              Origin - {origin.name}
+            </li>
+          </ul>
+        </div>
+      );
+    });
+  } else {
+    display = (
+      <div className="   py-10 px-10">
+        <h2 className="text-lime-600  font-creep text-2xl">
+          There is nothing here...
+        </h2>
+        <img src={image} alt="img" />
+        <div className="m-2"></div>
+      </div>
+    );
+  }
+
+  return <>{display}</>;
 };
 
 export default CardCharacter;

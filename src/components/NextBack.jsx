@@ -1,9 +1,9 @@
 import React from "react";
 
-const NextBack = ({ setCount, count, newCount  }) => {
+const NextBack = ({ setCount, count, useNewCount  }) => {
 
     const next = () => {
-        if (count < newCount) {
+        if (count < useNewCount) {
           setCount(count + 1)
         }  else {
           setCount(1)
@@ -14,7 +14,7 @@ const NextBack = ({ setCount, count, newCount  }) => {
         if (count > 1) {
           setCount(count - 1);
         } else {
-          setCount(newCount)
+          setCount(useNewCount)
         }
         return
       };

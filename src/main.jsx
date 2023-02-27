@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ReactDOM from 'react-dom/client'
 //components
 import Base from './Base'
+import ErrorText from './components/ErrorText'
 //Pages
 import Charaters from './pages/Charaters'
 import Location from './pages/Location'
@@ -19,10 +20,12 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Charaters/>,
+        errorElement: <ErrorText />
       },
       {
         path : '/location',
         element: <Location/>,
+        errorElement: <ErrorText />
       }
     ]
   },
