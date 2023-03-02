@@ -1,13 +1,15 @@
 import React from "react";
 import Spinner from "./Spinner";
-import image from "../assets/rick-and-morty.png";
+import images from "../assets/rick-and-morty.png";
 
-const CardCharacter = ({ characters, cargando, pages }) => {
-  let display;
+const CardCharacter = ({ characters, cargando, pages, }) => {
+  let cardContent;
+
+  
 
   if (pages > 0) {
-    display = characters.map((x) => {
-      let { id, image, name, status, location, species, origin } = x;
+    cardContent = characters.map((character) => {
+      let { id, image, name, status, location, species, origin } = character.data || character;
       return (
         <div
           key={id}
@@ -45,18 +47,18 @@ const CardCharacter = ({ characters, cargando, pages }) => {
       );
     });
   } else {
-    display = (
+    cardContent = (
       <div className="   py-10 px-10">
         <h2 className="text-lime-600  font-creep text-2xl">
           There is nothing here...
         </h2>
-        <img src={image} alt="img" />
+        <img src={images} alt="img" />
         <div className="m-2"></div>
       </div>
     );
   }
 
-  return <>{display}</>;
+  return <>{cardContent}</>;
 };
 
 export default CardCharacter;

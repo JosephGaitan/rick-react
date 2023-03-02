@@ -20,7 +20,7 @@ const Base = () => {
             <li>Characters</li>
           </Link>
           <Link to={"/location"}>
-            <li>Location</li>
+            <li>Locations</li>
           </Link>
         </ul>
       </nav>
