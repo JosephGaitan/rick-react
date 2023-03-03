@@ -1,8 +1,6 @@
 import React from "react";
 
-const Select = ({ setCount }) => {
-  let name = "Location";
-  let total = 126;
+const Select = ({ setCount, total, text }) => {
   let options = [];
 
   for (let i = 1; i <= total; i++) {
@@ -12,7 +10,7 @@ const Select = ({ setCount }) => {
       value={i}
       key={i}
     >
-      {name}  {i}
+      {text}  {i}
     </option>
     );
   }
@@ -23,7 +21,7 @@ const Select = ({ setCount }) => {
         className="  w-full text-xl font-creep rounded-md px-5 py-2 bg-lime-700"
         onChange={(e) => setCount(Number(e.target.value))}
       >
-        <option className="" value={0} >-Select a Location-</option>
+        <option className="" value={0} >-Select {text}-</option>
         {options}
       </select>
     </>

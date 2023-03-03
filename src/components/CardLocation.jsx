@@ -3,9 +3,10 @@ import CardCharacter from "./CardCharacter";
 import { useState } from "react";
 import Spinner from "./Spinner";
 
-const CardLocation = ({ locations, residents, loading }) => {
+const CardLocation = ({ locations, characters, loading }) => {
 
-  let { name, created, dimension, type } = locations;
+
+  let { name, created, dimension, type, } = locations;
 
   const formattedDate = new Date(created);
 
@@ -33,7 +34,7 @@ const CardLocation = ({ locations, residents, loading }) => {
         These are the characters who were last seen on this location
       </h2>
       <article className=" p-3 mt-3  font-bold border-2 border-lime-900 rounded-xl overflow-hidden   font-lato mb-5 sm:grid md:grid-cols-2 lg:grid-cols-4">
-        {residents.length > 0  ? (<CardCharacter characters={residents} cargando={loading} pages={1} />) : (<p className="text-lime-500 text-bold">No characters have been seen here yet :/</p>)}
+        {characters.length > 0  ? (<CardCharacter characters={characters} cargando={loading} pages={1} />) : (<p className="text-lime-500 text-bold">No characters have been seen here yet :/</p>)}
           
       </article>
     </div>

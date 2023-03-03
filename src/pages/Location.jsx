@@ -38,34 +38,35 @@ const Location = () => {
   }, [api]);
 
   return (
-    <div className="lg:grid lg:grid-cols-1 lg:mx-10">
-      <header className=" p-10 text-center font-creep">
-        <h2 className=" font-medium text-4xl text-lime-600 mb-7">
+    <div>
+      <div className="lg:grid lg:grid-cols-1 lg:mx-10">
+        <header className=" p-10 text-center font-creep">
+        <h2 className=" font-medium text-4xl text-lime-600 mb-3">Locations</h2>
+        <h3 className=" font-medium text-2xl text-lime-600">
           These are the known places of the Rick and Morty universe
-        </h2>
-        <nav className=" items-center sm:flex sm:justify-between sm:space-x-10 mt-10">
-          <div className="font-lato font-bold w-90% max-sm:mb-2">
-            <Select setCount={setCount} />
-          </div>
-          <div className="w-90% max-sm:mb-2">
-            <NextBack setCount={setCount} count={count} useNewCount={126} />
-          </div>
-        </nav>
-      </header>
-      <section className="grid grid-cols-1 mx-7 ">
-        <CardLocation
-          locations={useLocation}
-          loading={loading}
-          residents={useResidents}
-        />
-      </section>
-      <footer className="pr-10 pb-10 pl-10 flex justify-around ">
-        <nav className="">
-          <NextBack
-            setCount={setCount} count={count} useNewCount={126}
+        </h3>
+          <nav className=" items-center sm:flex sm:justify-between sm:space-x-10 mt-10">
+            <div className="font-lato font-bold w-90% max-sm:mb-2">
+              <Select setCount={setCount} text={"Location"} total={126} />
+            </div>
+            <div className="w-90% max-sm:mb-2">
+              <NextBack setCount={setCount} count={count} useNewCount={126} />
+            </div>
+          </nav>
+        </header>
+        <section className="grid grid-cols-1 mx-7 ">
+          <CardLocation
+            locations={useLocation}
+            loading={loading}
+            characters={useResidents}
           />
-        </nav>
-      </footer>
+        </section>
+        <footer className="pr-10 pb-10 pl-10 flex justify-around ">
+          <nav className="">
+            <NextBack setCount={setCount} count={count} useNewCount={126} />
+          </nav>
+        </footer>
+      </div>
     </div>
   );
 };

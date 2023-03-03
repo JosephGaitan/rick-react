@@ -50,7 +50,7 @@ const CardCharacter = ({ characters, cargando, pages, }) => {
     cardContent = (
       <div className="   py-10 px-10">
         <h2 className="text-lime-600  font-creep text-2xl">
-          There is nothing here...
+          Open your eyes Morty, there is nothing here...
         </h2>
         <img src={images} alt="img" />
         <div className="m-2"></div>

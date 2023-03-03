@@ -28,8 +28,8 @@ const NextBack = ({ setCount, count, useNewCount  }) => {
         >
           Back
         </button>
-        <span className=" cursor-default  bg-lime-700 py-2 px-5 rounded border-none ">
-          Page: {count}
+        <span className=" cursor-default text-xl  bg-lime-700 py-2 px-5 rounded border-none ">
+          {count}
         </span>
 
         <button

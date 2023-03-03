@@ -8,8 +8,10 @@ import ErrorText from './components/ErrorText'
 //Pages
 import Charaters from './pages/Charaters'
 import Location from './pages/Location'
+import Episodes from './pages/Episodes'
 //other
 import './index.css'
+
 
 
 const router = createBrowserRouter([
@@ -25,6 +27,11 @@ const router = createBrowserRouter([
       {
         path : '/location',
         element: <Location/>,
+        errorElement: <ErrorText />
+      },
+      {
+        path : '/episodes',
+        element : <Episodes />,
         errorElement: <ErrorText />
       }
     ]

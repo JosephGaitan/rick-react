@@ -36,7 +36,7 @@ const Charaters = () => {
   }, [api]);
 
   return (
-    <div className="">
+    <div>
       <header className="pr-10 pl-10 pt-10 text-center font-creep">
         <h2 className=" font-medium text-4xl text-lime-600 mb-3">Characters</h2>
         <h3 className=" font-medium text-2xl text-lime-600">
