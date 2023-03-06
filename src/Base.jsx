@@ -17,7 +17,7 @@ const Base = () => {
           </Link>
         </header>
         <nav className=" font-lato">
-          <ul className=" font-bold space-x-10 text-lg flex w-full px-10 bg-lime-600 ">
+          <ul className=" max-sm:justify-around font-bold max-sm:space-x-2 sm:space-x-10 sm:text-xl max-sm:text-lg flex w-full px-10 bg-lime-600 ">
             <Link to={"/"}>
               <li>Characters</li>
             </Link>
@@ -27,11 +27,14 @@ const Base = () => {
             <Link to={"/episodes"}>
               <li>Episodes</li>
             </Link>
+            <Link to={"/stats"}>
+              <li>Statistics</li>
+            </Link>
           </ul>
         </nav>
       </div>
 
-      <main className="pt-10">
+      <main className="pt-10 overflow-hidden">
         <div className="mt-2">
         <Outlet />
         </div>

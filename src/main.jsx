@@ -9,6 +9,7 @@ import ErrorText from './components/ErrorText'
 import Charaters from './pages/Charaters'
 import Location from './pages/Location'
 import Episodes from './pages/Episodes'
+import Statistics from './pages/Statistics'
 //other
 import './index.css'
 
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         path : '/episodes',
         element : <Episodes />,
         errorElement: <ErrorText />
+      },
+      {
+        path: '/stats',
+        element: <Statistics/>,
+        errorElement: <ErrorText/>
       }
     ]
   },

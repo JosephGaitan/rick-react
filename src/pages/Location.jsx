@@ -38,7 +38,6 @@ const Location = () => {
   }, [api]);
 
   return (
-    <div>
       <div className="lg:grid lg:grid-cols-1 lg:mx-10">
         <header className=" p-10 text-center font-creep">
         <h2 className=" font-medium text-4xl text-lime-600 mb-3">Locations</h2>
@@ -46,10 +45,10 @@ const Location = () => {
           These are the known places of the Rick and Morty universe
         </h3>
           <nav className=" items-center sm:flex sm:justify-between sm:space-x-10 mt-10">
-            <div className="font-lato font-bold w-90% max-sm:mb-2">
+            <div className="font-lato font-bold max-sm:mb-2">
               <Select setCount={setCount} text={"Location"} total={126} />
             </div>
-            <div className="w-90% max-sm:mb-2">
+            <div className=" max-sm:mb-2">
               <NextBack setCount={setCount} count={count} useNewCount={126} />
             </div>
           </nav>
@@ -67,7 +66,6 @@ const Location = () => {
           </nav>
         </footer>
       </div>
-    </div>
   );
 };
 
