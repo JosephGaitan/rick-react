@@ -9,7 +9,6 @@ const Episodes = () => {
   const [cargando, setCargando] = useState(false);
   const [count, setCount] = useState(1);
   const [useEpisodes, setEpisodes] = useState([]);
-  const [useSearch, setUseSearch] = useState(String(""));
   const [useCharacters, setCharacters] = useState([]);
 
   let api = `https://rickandmortyapi.com/api/episode/${count}`;
