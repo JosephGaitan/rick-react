@@ -292,7 +292,7 @@ const Statistics = () => {
           </figure>
         </div>
       </section>
-      <section className="px-5 pb-5">
+      <section className="px-5 pb-10">
         <h4 className="font-2xl py-2 text-lime-700 font-lato  border-b-2 border-lime-900">
           Mortality graph for all the episodes based on the final status of the characters by the end of each episode:
         </h4>
