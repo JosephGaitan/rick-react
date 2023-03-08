@@ -261,7 +261,7 @@ const Statistics = () => {
       <header className=" p-10 text-center font-creep">
         <h2 className=" font-medium text-4xl text-lime-600 mb-3">Statistics</h2>
         <h3 className=" font-medium text-2xl text-lime-600">
-          These is some relevant data about the rick and morty characters
+          This is some relevant data about the rick and morty characters
         </h3>
       </header>
       <section className="px-5 mb-10">
